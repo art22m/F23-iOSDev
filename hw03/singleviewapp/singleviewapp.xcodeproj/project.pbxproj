@@ -12,6 +12,8 @@
 		B9889B9D2ACDD6DF000CE091 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9889B9C2ACDD6DF000CE091 /* Assets.xcassets */; };
 		B9889BA02ACDD6DF000CE091 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9889B9E2ACDD6DF000CE091 /* LaunchScreen.storyboard */; };
 		B9889BA82ACDDA8C000CE091 /* LogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9889BA72ACDDA8C000CE091 /* LogViewController.swift */; };
+		B9889BAA2ACDEB71000CE091 /* UserInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9889BA92ACDEB71000CE091 /* UserInfoView.swift */; };
+		B9889BAC2ACDF3C7000CE091 /* InputInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9889BAB2ACDF3C7000CE091 /* InputInfoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		B9889B9F2ACDD6DF000CE091 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B9889BA12ACDD6DF000CE091 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B9889BA72ACDDA8C000CE091 /* LogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogViewController.swift; sourceTree = "<group>"; };
+		B9889BA92ACDEB71000CE091 /* UserInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoView.swift; sourceTree = "<group>"; };
+		B9889BAB2ACDF3C7000CE091 /* InputInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputInfoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,11 +59,13 @@
 			isa = PBXGroup;
 			children = (
 				B9889B932ACDD6DD000CE091 /* AppDelegate.swift */,
+				B9889BA92ACDEB71000CE091 /* UserInfoView.swift */,
+				B9889BAB2ACDF3C7000CE091 /* InputInfoView.swift */,
 				B9889B972ACDD6DD000CE091 /* ViewController.swift */,
+				B9889BA72ACDDA8C000CE091 /* LogViewController.swift */,
 				B9889B9C2ACDD6DF000CE091 /* Assets.xcassets */,
 				B9889B9E2ACDD6DF000CE091 /* LaunchScreen.storyboard */,
 				B9889BA12ACDD6DF000CE091 /* Info.plist */,
-				B9889BA72ACDDA8C000CE091 /* LogViewController.swift */,
 			);
 			path = singleviewapp;
 			sourceTree = "<group>";
@@ -135,8 +141,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				B9889BA82ACDDA8C000CE091 /* LogViewController.swift in Sources */,
+				B9889BAC2ACDF3C7000CE091 /* InputInfoView.swift in Sources */,
 				B9889B982ACDD6DD000CE091 /* ViewController.swift in Sources */,
 				B9889B942ACDD6DD000CE091 /* AppDelegate.swift in Sources */,
+				B9889BAA2ACDEB71000CE091 /* UserInfoView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

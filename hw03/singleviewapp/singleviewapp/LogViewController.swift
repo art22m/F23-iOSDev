@@ -35,7 +35,7 @@ class LogViewController: UIViewController {
         logLifecycleMethod()
     }
 
-    // MARK: Helpers
+    // MARK: - Private Helpers
     
     private func logLifecycleMethod(name: String = #function) {
         print("Lifecycle method \(name) is executing")
