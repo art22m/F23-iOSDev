@@ -1,6 +1,20 @@
 import UIKit
 
+// MARK: - Events Handler
+
+protocol InputInfoViewEventsHandler: AnyObject {
+    
+    func onSaveButtonPressed(name: String, education: String)
+    
+}
+
+// MARK: - View
+
 final class InputInfoView: UIView {
+    
+    // MARK: - Internal Properties
+    
+    weak var eventsHandler: InputInfoViewEventsHandler?
     
     // MARK: - Private Properties
     
@@ -115,14 +129,9 @@ final class InputInfoView: UIView {
             return
         }
         
-        print(name, education)
+        eventsHandler?.onSaveButtonPressed(name: name, education: education)
+        inputNameTextField.text = ""
+        inputEducationTextField.text = ""
     }
     
 }
-
-// MARK: Extensions
-
-extension InputInfoView {
-    
-}
-

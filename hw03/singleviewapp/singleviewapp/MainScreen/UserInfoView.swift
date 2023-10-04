@@ -1,5 +1,7 @@
 import UIKit
 
+// MARK: - View
+
 final class UserInfoView: UIView {
     
     // MARK: - Private Properties
@@ -12,19 +14,28 @@ final class UserInfoView: UIView {
         return view
     }()
     
+    private lazy var labelsStackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.axis = .vertical
+        stackView.distribution = .equalSpacing
+        stackView.contentMode = .scaleToFill
+        return stackView
+    }()
+    
     private lazy var nameLabel: UILabel = {
         let label = UILabel()
+        label.textAlignment = .center
         label.textColor = .white
-        label.font = UIFont.systemFont(ofSize: 15, weight: .bold)
-        label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = UIFont.systemFont(ofSize: 20, weight: .bold)
         return label
     }()
     
     private lazy var educationLabel: UILabel = {
         let label = UILabel()
+        label.textAlignment = .center
         label.textColor = .white
-        label.font = UIFont.systemFont(ofSize: 15, weight: .bold)
-        label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = UIFont.systemFont(ofSize: 20, weight: .bold)
         return label
     }()
     
@@ -52,7 +63,11 @@ final class UserInfoView: UIView {
         
         backgroundColor = .systemMint
         
-        [userImageView, nameLabel, educationLabel].forEach {
+        [nameLabel, educationLabel].forEach {
+            labelsStackView.addArrangedSubview($0)
+        }
+        
+        [userImageView, labelsStackView].forEach {
             addSubview($0)
         }
         
@@ -66,14 +81,13 @@ final class UserInfoView: UIView {
             userImageView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -20),
             userImageView.trailingAnchor.constraint(equalTo: centerXAnchor, constant: -20),
             
-            nameLabel.leadingAnchor.constraint(greaterThanOrEqualTo: centerXAnchor, constant: 20),
-            nameLabel.topAnchor.constraint(equalTo: topAnchor, constant: 20),
-            nameLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
-            nameLabel.bottomAnchor.constraint(greaterThanOrEqualTo: educationLabel.topAnchor, constant: -20),
+            labelsStackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
+            labelsStackView.topAnchor.constraint(equalTo: topAnchor, constant: 20),
+            labelsStackView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -20),
+            labelsStackView.leadingAnchor.constraint(equalTo: centerXAnchor, constant: 20),
             
-            educationLabel.leadingAnchor.constraint(greaterThanOrEqualTo: centerXAnchor, constant: 20),
-            educationLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -20),
-            educationLabel.leadingAnchor.constraint(greaterThanOrEqualTo: userImageView.trailingAnchor, constant: 20),
+            nameLabel.heightAnchor.constraint(equalToConstant: 20),
+            educationLabel.heightAnchor.constraint(equalToConstant: 20),
         ])
     }
     

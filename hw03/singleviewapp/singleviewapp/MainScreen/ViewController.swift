@@ -11,7 +11,10 @@ class ViewController: LogViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         setUpViews()
+        
+        hideKeyboardWhenTappedAround()
     }
     
     // MARK: - Private Helpers
@@ -19,14 +22,12 @@ class ViewController: LogViewController {
     private func setUpViews() {
         view.backgroundColor = .systemYellow
         
+        inputInfoView.eventsHandler = self
         [userInfoView, inputInfoView].forEach({
             view.addSubview($0)
         })
         
         setUpLayout()
-        
-        let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
-        view.addGestureRecognizer(tap)
     }
     
     private func setUpLayout() {
@@ -49,9 +50,14 @@ class ViewController: LogViewController {
         
     }
     
-    @objc
-    private func dismissKeyboard() {
-        view.endEditing(true)
-    }
 }
 
+// MARK: - InputInfoViewEventsHandler
+
+extension ViewController: InputInfoViewEventsHandler {
+    
+    func onSaveButtonPressed(name: String, education: String) {
+        userInfoView.update(name: name, education: education)
+    }
+    
+}
