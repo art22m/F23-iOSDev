@@ -1,6 +1,8 @@
 import UIKit
 
-class ViewController: UIViewController {
+// MARK: - ContactsViewController
+
+class ContactsViewController: UIViewController {
     
     // MARK: - Private Properties
     
@@ -14,7 +16,7 @@ class ViewController: UIViewController {
         return view
     }()
     
-    private lazy var contactModels = ContactModelsStub()
+    private lazy var contactModels = ContactModelsMock()
     
     // MARK: - Lifecycle
     
@@ -48,13 +50,21 @@ class ViewController: UIViewController {
     
 }
 
-// MARK: UICollectionViewDelegate
+// MARK: - UICollectionViewDelegate
 
-extension ViewController: UICollectionViewDelegate { }
+extension ContactsViewController: UICollectionViewDelegate {
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let vc = ContactDetailsViewController()
+        vc.configure(with: contactModels.contacts[indexPath.row])
+        present(vc, animated: true)
+    }
+    
+}
 
-// MARK: UICollectionViewDataSource
+// MARK: - UICollectionViewDataSource
 
-extension ViewController: UICollectionViewDataSource {
+extension ContactsViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return contactModels.contacts.count
@@ -73,9 +83,9 @@ extension ViewController: UICollectionViewDataSource {
     
 }
 
-// MARK:  UICollectionViewDelegateFlowLayout
+// MARK: - UICollectionViewDelegateFlowLayout
 
-extension ViewController: UICollectionViewDelegateFlowLayout {
+extension ContactsViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: view.frame.width - 20, height: 60)

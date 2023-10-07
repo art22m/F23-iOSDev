@@ -1,5 +1,7 @@
 import UIKit
 
+// MARK: - ContactCell
+
 class ContactCell: UICollectionViewCell {
     
     static let identifier = "ContactCell"
@@ -13,7 +15,6 @@ class ContactCell: UICollectionViewCell {
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
-    
     
     private lazy var nameLabel: UILabel = {
         let label = UILabel()
@@ -70,8 +71,8 @@ class ContactCell: UICollectionViewCell {
     // MARK: - Internal Methods
     
     func configure(with model: ContactModel) {
-        self.userImageView.image = model.image
-        self.nameLabel.text = model.name
+        userImageView.image = model.image
+        nameLabel.text = model.name
     }
     
 }
