@@ -1,10 +1,3 @@
-//
-//  AppDelegate.swift
-//  mycontacts
-//
-//  Created by Artem Murashko on 07.10.2023.
-//
-
 import UIKit
 
 @main
