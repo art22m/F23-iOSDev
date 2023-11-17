@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7857380EA23B958CAAF4D720 /* Pods_letlaugh.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BF90B57558FFE80EA8C596 /* Pods_letlaugh.framework */; };
 		B90851342B064AD80085861B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90851332B064AD80085861B /* AppDelegate.swift */; };
 		B90851382B064AD80085861B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90851372B064AD80085861B /* ViewController.swift */; };
 		B908513D2B064ADA0085861B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B908513C2B064ADA0085861B /* Assets.xcassets */; };
@@ -20,6 +21,9 @@
 		B908513C2B064ADA0085861B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B908513F2B064ADA0085861B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B90851412B064ADA0085861B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B9AEDD28846E86F5E5732388 /* Pods-letlaugh.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-letlaugh.release.xcconfig"; path = "Target Support Files/Pods-letlaugh/Pods-letlaugh.release.xcconfig"; sourceTree = "<group>"; };
+		F17FC34682C61059F0D79D7B /* Pods-letlaugh.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-letlaugh.debug.xcconfig"; path = "Target Support Files/Pods-letlaugh/Pods-letlaugh.debug.xcconfig"; sourceTree = "<group>"; };
+		F9BF90B57558FFE80EA8C596 /* Pods_letlaugh.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_letlaugh.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,17 +31,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7857380EA23B958CAAF4D720 /* Pods_letlaugh.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6AD4C416E2EE01240874AEE3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F17FC34682C61059F0D79D7B /* Pods-letlaugh.debug.xcconfig */,
+				B9AEDD28846E86F5E5732388 /* Pods-letlaugh.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		B90851272B064AD70085861B = {
 			isa = PBXGroup;
 			children = (
 				B90851322B064AD80085861B /* letlaugh */,
 				B90851312B064AD80085861B /* Products */,
+				6AD4C416E2EE01240874AEE3 /* Pods */,
+				BD234011A649A3581ECEAA98 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -61,6 +77,14 @@
 			path = letlaugh;
 			sourceTree = "<group>";
 		};
+		BD234011A649A3581ECEAA98 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F9BF90B57558FFE80EA8C596 /* Pods_letlaugh.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -68,6 +92,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B90851442B064ADA0085861B /* Build configuration list for PBXNativeTarget "letlaugh" */;
 			buildPhases = (
+				0F6AD67F22AEBF22A447CF1C /* [CP] Check Pods Manifest.lock */,
+				B9F4EB342B0776A20072EF43 /* SwiftLint */,
 				B908512C2B064AD70085861B /* Sources */,
 				B908512D2B064AD70085861B /* Frameworks */,
 				B908512E2B064AD70085861B /* Resources */,
@@ -125,6 +151,50 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0F6AD67F22AEBF22A447CF1C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-letlaugh-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B9F4EB342B0776A20072EF43 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B908512C2B064AD70085861B /* Sources */ = {
@@ -266,6 +336,7 @@
 		};
 		B90851452B064ADA0085861B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F17FC34682C61059F0D79D7B /* Pods-letlaugh.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -293,6 +364,7 @@
 		};
 		B90851462B064ADA0085861B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B9AEDD28846E86F5E5732388 /* Pods-letlaugh.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
