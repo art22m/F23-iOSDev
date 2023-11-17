@@ -1,11 +1,15 @@
 import Foundation
 
+// MARK: - Protocol
+
 protocol JokesNetworkService {
     
     func getJoke(number: Int, completion: @escaping (Result<Joke, Error>) -> Void)
     func getRandomJoke(completion: @escaping (Result<Joke, Error>) -> Void)
     
 }
+
+// MARK: - Implementation
 
 final class JokesNetworkServiceImpl: JokesNetworkService {
     
@@ -59,6 +63,7 @@ final class JokesNetworkServiceImpl: JokesNetworkService {
     }
     
     func getRandomJoke(completion: @escaping (Result<Joke, Error>) -> Void) {
+        // Этот метод по сути не нужен, хочу показать что добавить не составит труда
         fatalError("not implemented")
     }
     

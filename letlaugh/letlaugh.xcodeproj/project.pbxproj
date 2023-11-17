@@ -110,7 +110,6 @@
 		B9F4EB372B079BD80072EF43 /* ServiceLayer */ = {
 			isa = PBXGroup;
 			children = (
-				B9F4EB4D2B07BD470072EF43 /* Parsers */,
 				B9F4EB472B07B2510072EF43 /* Models */,
 				B9F4EB392B079C720072EF43 /* Services */,
 				B9F4EB382B079C5A0072EF43 /* Assembly */,
@@ -162,13 +161,6 @@
 				B9F4EB452B07B2490072EF43 /* Joke.swift */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		B9F4EB4D2B07BD470072EF43 /* Parsers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Parsers;
 			sourceTree = "<group>";
 		};
 		B9F4EB4F2B07BE4F0072EF43 /* Network */ = {
