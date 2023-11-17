@@ -12,6 +12,9 @@
 		B90851382B064AD80085861B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90851372B064AD80085861B /* ViewController.swift */; };
 		B908513D2B064ADA0085861B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B908513C2B064ADA0085861B /* Assets.xcassets */; };
 		B90851402B064ADA0085861B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B908513E2B064ADA0085861B /* LaunchScreen.storyboard */; };
+		B9F4EB3E2B07A4610072EF43 /* RequestSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F4EB3D2B07A4610072EF43 /* RequestSender.swift */; };
+		B9F4EB402B07A9200072EF43 /* RequestSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F4EB3F2B07A9200072EF43 /* RequestSettings.swift */; };
+		B9F4EB422B07A9720072EF43 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F4EB412B07A9720072EF43 /* Parser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		B908513F2B064ADA0085861B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B90851412B064ADA0085861B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B9AEDD28846E86F5E5732388 /* Pods-letlaugh.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-letlaugh.release.xcconfig"; path = "Target Support Files/Pods-letlaugh/Pods-letlaugh.release.xcconfig"; sourceTree = "<group>"; };
+		B9F4EB3D2B07A4610072EF43 /* RequestSender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestSender.swift; sourceTree = "<group>"; };
+		B9F4EB3F2B07A9200072EF43 /* RequestSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestSettings.swift; sourceTree = "<group>"; };
+		B9F4EB412B07A9720072EF43 /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
 		F17FC34682C61059F0D79D7B /* Pods-letlaugh.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-letlaugh.debug.xcconfig"; path = "Target Support Files/Pods-letlaugh/Pods-letlaugh.debug.xcconfig"; sourceTree = "<group>"; };
 		F9BF90B57558FFE80EA8C596 /* Pods_letlaugh.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_letlaugh.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -68,6 +74,9 @@
 		B90851322B064AD80085861B /* letlaugh */ = {
 			isa = PBXGroup;
 			children = (
+				B9F4EB352B079BC60072EF43 /* PresentationLayer */,
+				B9F4EB372B079BD80072EF43 /* ServiceLayer */,
+				B9F4EB362B079BD00072EF43 /* CoreLayer */,
 				B90851332B064AD80085861B /* AppDelegate.swift */,
 				B90851372B064AD80085861B /* ViewController.swift */,
 				B908513C2B064ADA0085861B /* Assets.xcassets */,
@@ -75,6 +84,70 @@
 				B90851412B064ADA0085861B /* Info.plist */,
 			);
 			path = letlaugh;
+			sourceTree = "<group>";
+		};
+		B9F4EB352B079BC60072EF43 /* PresentationLayer */ = {
+			isa = PBXGroup;
+			children = (
+				B9F4EB3B2B079C9D0072EF43 /* MainScreen */,
+				B9F4EB3A2B079C800072EF43 /* FavouriteScreen */,
+			);
+			path = PresentationLayer;
+			sourceTree = "<group>";
+		};
+		B9F4EB362B079BD00072EF43 /* CoreLayer */ = {
+			isa = PBXGroup;
+			children = (
+				B9F4EB3C2B07A4310072EF43 /* Network */,
+			);
+			path = CoreLayer;
+			sourceTree = "<group>";
+		};
+		B9F4EB372B079BD80072EF43 /* ServiceLayer */ = {
+			isa = PBXGroup;
+			children = (
+				B9F4EB392B079C720072EF43 /* Services */,
+				B9F4EB382B079C5A0072EF43 /* Assembly */,
+			);
+			path = ServiceLayer;
+			sourceTree = "<group>";
+		};
+		B9F4EB382B079C5A0072EF43 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		B9F4EB392B079C720072EF43 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		B9F4EB3A2B079C800072EF43 /* FavouriteScreen */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = FavouriteScreen;
+			sourceTree = "<group>";
+		};
+		B9F4EB3B2B079C9D0072EF43 /* MainScreen */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MainScreen;
+			sourceTree = "<group>";
+		};
+		B9F4EB3C2B07A4310072EF43 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				B9F4EB3D2B07A4610072EF43 /* RequestSender.swift */,
+				B9F4EB3F2B07A9200072EF43 /* RequestSettings.swift */,
+				B9F4EB412B07A9720072EF43 /* Parser.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		BD234011A649A3581ECEAA98 /* Frameworks */ = {
@@ -202,7 +275,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				B90851382B064AD80085861B /* ViewController.swift in Sources */,
+				B9F4EB402B07A9200072EF43 /* RequestSettings.swift in Sources */,
+				B9F4EB422B07A9720072EF43 /* Parser.swift in Sources */,
 				B90851342B064AD80085861B /* AppDelegate.swift in Sources */,
+				B9F4EB3E2B07A4610072EF43 /* RequestSender.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
