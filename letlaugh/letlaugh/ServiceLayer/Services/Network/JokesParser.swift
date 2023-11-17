@@ -1,11 +1,15 @@
 import Foundation
 import SwiftSoup
 
+// MARK: - Protocol
+
 protocol JokesParser {
     
     func parse(data: Data) -> Joke?
     
 }
+
+// MARK: - Implementation
 
 final class BaneksParser: JokesParser {
     

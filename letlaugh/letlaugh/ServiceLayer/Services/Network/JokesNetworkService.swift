@@ -4,7 +4,8 @@ import Foundation
 
 protocol JokesNetworkService {
     
-    func getJoke(number: Int, completion: @escaping (Result<Joke, Error>) -> Void)
+    func getNextJoke(completion: @escaping (Result<Joke, Error>) -> Void)
+    func getJoke(id: Int, completion: @escaping (Result<Joke, Error>) -> Void)
     func getRandomJoke(completion: @escaping (Result<Joke, Error>) -> Void)
     
 }
@@ -38,8 +39,14 @@ final class JokesNetworkServiceImpl: JokesNetworkService {
     
     // MARK: - Internal Methods
     
-    func getJoke(number: Int, completion: @escaping (Result<Joke, Error>) -> Void) {
-        guard let url = URL(string: "\(baseUrl)/\(number)") else {
+    func getNextJoke(completion: @escaping (Result<Joke, Error>) -> Void) {
+        let id = AppData.lastJokeID + 1
+        getJoke(id: id, completion: completion)
+        AppData.lastJokeID = id
+    }
+    
+    func getJoke(id: Int, completion: @escaping (Result<Joke, Error>) -> Void) {
+        guard let url = URL(string: "\(baseUrl)/\(id)") else {
             completion(.failure(Errors.buildUrlError))
             return
         }

@@ -1,6 +1,10 @@
 import Foundation
 
+// MARK: - Protocol
+
 protocol ServiceAssembly { }
+
+// MARK: - Implementation
 
 final class ServiceAssemblyImpl: ServiceAssembly {
 

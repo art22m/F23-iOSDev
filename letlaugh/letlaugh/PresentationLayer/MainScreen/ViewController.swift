@@ -1,10 +1,3 @@
-//
-//  ViewController.swift
-//  letlaugh
-//
-//  Created by Artem Murashko on 16.11.2023.
-//
-
 import UIKit
 
 class ViewController: UIViewController {
@@ -15,9 +8,11 @@ class ViewController: UIViewController {
         
         let ass = ServiceAssemblyImpl()
         let jokesService = ass.makeJokesNetworkService()
-        jokesService.getJoke(number: 10) { result in
+        
+        jokesService.getNextJoke { result in
             print(result)
         }
+        
     }
 
 }
