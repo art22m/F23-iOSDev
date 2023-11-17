@@ -4,4 +4,5 @@ target 'letlaugh' do
   use_frameworks!
 
   pod 'SwiftLint', '~> 0.46.2'
+  pod 'SwiftSoup'
 end
