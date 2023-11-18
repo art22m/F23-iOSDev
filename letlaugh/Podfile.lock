@@ -1,20 +1,28 @@
 PODS:
+  - Koloda (5.0.1):
+    - pop (~> 1.0)
+  - pop (1.0.12)
   - SwiftLint (0.46.5)
   - SwiftSoup (2.6.1)
 
 DEPENDENCIES:
+  - Koloda
   - SwiftLint (~> 0.46.2)
   - SwiftSoup
 
 SPEC REPOS:
   trunk:
+    - Koloda
+    - pop
     - SwiftLint
     - SwiftSoup
 
 SPEC CHECKSUMS:
+  Koloda: d07b9199a383abc5898b62aa945a599f5e7c0c4b
+  pop: d582054913807fd11fd50bfe6a539d91c7e1a55a
   SwiftLint: 2c16e8fa99dac2e440dc0c70ea74d2532048f6cf
   SwiftSoup: 5dd2c1b06afc964f30d99894af6ede22ede627aa
 
-PODFILE CHECKSUM: c9a513886aab372558260511178dfc56c0c83a1a
+PODFILE CHECKSUM: 3b61932f4822645b312312492ff2eaa6fce28d2b
 
 COCOAPODS: 1.14.2

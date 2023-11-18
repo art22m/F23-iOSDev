@@ -5,4 +5,5 @@ target 'letlaugh' do
 
   pod 'SwiftLint', '~> 0.46.2'
   pod 'SwiftSoup'
+  pod 'Koloda'
 end

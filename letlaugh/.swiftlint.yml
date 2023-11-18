@@ -11,7 +11,6 @@ disabled_rules:
   - orphaned_doc_comment
 
 opt_in_rules:
-  - attributes
   - closure_end_indentation
   - closure_spacing
   - collection_alignment
@@ -50,13 +49,6 @@ custom_rules:
     capture_group: 1
     message: "Use explicit type annotation when initializing empty arrays and dictionaries"
     severity: warning
-
-attributes:
-  always_on_same_line:
-    - "@IBSegueAction"
-    - "@IBAction"
-    - "@NSManaged"
-    - "@objc"
 
 force_cast: warning
 force_try: warning

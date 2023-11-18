@@ -6,7 +6,6 @@ protocol JokesNetworkService {
     
     func getNextJoke(completion: @escaping (Result<Joke, Error>) -> Void)
     func getJoke(id: Int, completion: @escaping (Result<Joke, Error>) -> Void)
-    func getRandomJoke(completion: @escaping (Result<Joke, Error>) -> Void)
     
 }
 
@@ -67,11 +66,6 @@ final class JokesNetworkServiceImpl: JokesNetworkService {
                 completion(.failure(error))
             }
         }
-    }
-    
-    func getRandomJoke(completion: @escaping (Result<Joke, Error>) -> Void) {
-        // Этот метод по сути не нужен, хочу показать что добавить не составит труда
-        fatalError("not implemented")
     }
     
 }
