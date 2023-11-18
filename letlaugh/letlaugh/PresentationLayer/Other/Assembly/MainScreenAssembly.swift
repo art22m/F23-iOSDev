@@ -15,7 +15,9 @@ final class MainScreenAssembly: ScreenAssembly {
     // MARK: - Internal Methods
     
     func makeViewController() -> UIViewController {
-        let viewController = MainViewController()
+        let viewController = MainViewController(
+            jokesNetworkService: serviceAssembly.makeJokesNetworkService()
+        )
         
         viewController.tabBarItem.image = UIImage(systemName: "figure.wave.circle.fill") 
         viewController.title = "Jokes strean"

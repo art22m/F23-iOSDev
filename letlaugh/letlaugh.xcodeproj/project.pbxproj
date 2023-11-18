@@ -12,8 +12,7 @@
 		B90851382B064AD80085861B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90851372B064AD80085861B /* MainViewController.swift */; };
 		B908513D2B064ADA0085861B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B908513C2B064ADA0085861B /* Assets.xcassets */; };
 		B90851402B064ADA0085861B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B908513E2B064ADA0085861B /* LaunchScreen.storyboard */; };
-		B9B0D5FF2B08D6A6003D44BF /* OverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9B0D5FD2B08D6A6003D44BF /* OverlayView.xib */; };
-		B9B0D6002B08D6A6003D44BF /* OverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B0D5FE2B08D6A6003D44BF /* OverlayView.swift */; };
+		B9B0D6002B08D6A6003D44BF /* JokeOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B0D5FE2B08D6A6003D44BF /* JokeOverlayView.swift */; };
 		B9B0D6072B08DBCE003D44BF /* MainScreenAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B0D6062B08DBCE003D44BF /* MainScreenAssembly.swift */; };
 		B9B0D60B2B08DE2C003D44BF /* FavouriteScreenAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B0D60A2B08DE2C003D44BF /* FavouriteScreenAssembly.swift */; };
 		B9B0D60D2B08DEB0003D44BF /* RootCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B0D60C2B08DEB0003D44BF /* RootCoordinator.swift */; };
@@ -35,8 +34,7 @@
 		B908513F2B064ADA0085861B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B90851412B064ADA0085861B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B9AEDD28846E86F5E5732388 /* Pods-letlaugh.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-letlaugh.release.xcconfig"; path = "Target Support Files/Pods-letlaugh/Pods-letlaugh.release.xcconfig"; sourceTree = "<group>"; };
-		B9B0D5FD2B08D6A6003D44BF /* OverlayView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OverlayView.xib; sourceTree = "<group>"; };
-		B9B0D5FE2B08D6A6003D44BF /* OverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverlayView.swift; sourceTree = "<group>"; };
+		B9B0D5FE2B08D6A6003D44BF /* JokeOverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JokeOverlayView.swift; sourceTree = "<group>"; };
 		B9B0D6062B08DBCE003D44BF /* MainScreenAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenAssembly.swift; sourceTree = "<group>"; };
 		B9B0D60A2B08DE2C003D44BF /* FavouriteScreenAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteScreenAssembly.swift; sourceTree = "<group>"; };
 		B9B0D60C2B08DEB0003D44BF /* RootCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootCoordinator.swift; sourceTree = "<group>"; };
@@ -194,8 +192,7 @@
 		B9F4EB3B2B079C9D0072EF43 /* MainScreen */ = {
 			isa = PBXGroup;
 			children = (
-				B9B0D5FE2B08D6A6003D44BF /* OverlayView.swift */,
-				B9B0D5FD2B08D6A6003D44BF /* OverlayView.xib */,
+				B9B0D5FE2B08D6A6003D44BF /* JokeOverlayView.swift */,
 				B90851372B064AD80085861B /* MainViewController.swift */,
 			);
 			path = MainScreen;
@@ -330,7 +327,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B90851402B064ADA0085861B /* LaunchScreen.storyboard in Resources */,
-				B9B0D5FF2B08D6A6003D44BF /* OverlayView.xib in Resources */,
 				B908513D2B064ADA0085861B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -415,7 +411,7 @@
 				B9F4EB3E2B07A4610072EF43 /* RequestSender.swift in Sources */,
 				B9F4EB462B07B2490072EF43 /* Joke.swift in Sources */,
 				B9B0D60F2B08E088003D44BF /* ScreenAssembly.swift in Sources */,
-				B9B0D6002B08D6A6003D44BF /* OverlayView.swift in Sources */,
+				B9B0D6002B08D6A6003D44BF /* JokeOverlayView.swift in Sources */,
 				B9F4EB592B0802F20072EF43 /* AppData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

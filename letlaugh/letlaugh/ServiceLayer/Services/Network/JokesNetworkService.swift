@@ -2,7 +2,7 @@ import Foundation
 
 // MARK: - Protocol
 
-protocol JokesNetworkService {
+protocol JokesNetworkService: AnyObject {
     
     func getNextJoke(completion: @escaping (Result<Joke, Error>) -> Void)
     func getJoke(id: Int, completion: @escaping (Result<Joke, Error>) -> Void)
