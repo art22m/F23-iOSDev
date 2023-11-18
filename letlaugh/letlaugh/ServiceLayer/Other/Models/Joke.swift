@@ -15,15 +15,16 @@ struct Joke: Codable {
 extension Joke {
     
     func toCardImage(frame: CGRect) -> UIImageView {
-        let view: UITextView = .staticView(fontSize: 22)
-        view.text = text
-        view.frame = frame
+        let textView = UITextView.staticView(fontSize: 22)
+        textView.text = text
+        textView.frame = frame
         
         print(text)
         print(frame)
         
-        let imageWithText = UIImageView(image: view.asImage())
-        imageWithText.backgroundColor = .systemOrange
+        let imageWithText = UIImageView(image: textView.asImage())
+        imageWithText.backgroundColor = .white
+        imageWithText.layer.cornerRadius = 20
         return imageWithText
     }
     

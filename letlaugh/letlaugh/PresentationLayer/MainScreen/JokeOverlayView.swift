@@ -23,9 +23,6 @@ class JokeOverlayView: OverlayView {
     private enum Constants {
         static var overlayRightImageName = "heart.fill"
         static var overlayLeftImageName = "heart.slash.fill"
-        
-        static var width = 50
-        static var height = 50
     }
     
     // MARK: - Private Properties
@@ -52,13 +49,7 @@ class JokeOverlayView: OverlayView {
     // MARK: - Private Methods
     
     private func commonInit() {
-        self.addSubview(overlayImageView)
-        NSLayoutConstraint.activate([
-            overlayImageView.topAnchor.constraint(equalTo: self.topAnchor),
-            overlayImageView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
-            overlayImageView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
-            overlayImageView.trailingAnchor.constraint(equalTo: self.trailingAnchor)
-        ])
+        self.embed(overlayImageView)
     }
     
 }

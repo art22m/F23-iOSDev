@@ -37,7 +37,7 @@ final class RootCoordinator {
             animated: true
         )
         tabBarViewController.tabBar.isTranslucent = false
-        tabBarViewController.tabBar.backgroundColor = .systemGray3
+        tabBarViewController.tabBar.backgroundColor = .white 
         return tabBarViewController
     }
     

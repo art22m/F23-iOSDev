@@ -3,14 +3,21 @@ import Koloda
 
 class MainViewController: UIViewController {
     
+    // MARK: - Private Types
+    
+    private enum Constants {
+        
+        static var backgroundColor: UIColor = .systemGray3
+        
+    }
+    
     // MARK: - Private Properties
     
     private var jokesNetworkService: JokesNetworkService
     
     private lazy var kolodaView: KolodaView = {
         let view = KolodaView()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = .systemGray6
+        view.backgroundColor = Constants.backgroundColor
         return view
     }()
     
@@ -30,34 +37,41 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        getJokes()
+        getJokes(number: 3)
         setUpViews()
     }
     
     // MARK: - Private Methods
     
     private func setUpViews() {
-        view.backgroundColor = .systemMint
+        view.backgroundColor = Constants.backgroundColor
         view.addSubview(kolodaView)
-        view.embed(kolodaView)
+        view.embed(kolodaView, horizontalIndent: 30, verticalIndent: 60)
         
         kolodaView.dataSource = self
         kolodaView.delegate = self
     }
     
-    private func getJokes() {
-        jokesNetworkService.getNextJoke { [weak self] result in
-            switch result {
-            case .success(let joke):
-                self?.jokes.append(joke)
+    private func getJokes(number: Int = 1) {
+        let group = DispatchGroup()
+        
+        for _ in 0 ..< number {
+            group.enter()
+            jokesNetworkService.getNextJoke { [weak self] result in
+                defer { group.leave() }
                 
-                DispatchQueue.main.async {
-                    self?.kolodaView.reloadData()
+                switch result {
+                case .success(let joke):
+                    self?.jokes.append(joke)
+                    
+                case .failure:
+                    print("show alert here")
                 }
-                
-            case .failure:
-                print("show alert here")
             }
+        }
+        
+        group.notify(queue: .main) { [weak self] in
+            self?.kolodaView.reloadData()
         }
     }
     
@@ -69,11 +83,10 @@ extension MainViewController: KolodaViewDelegate {
     
     func kolodaDidRunOutOfCards(_ koloda: KolodaView) {
         print("DEBUG: run out of cards")
-        getJokes()
     }
     
-    func koloda(_ koloda: KolodaView, didSelectCardAt index: Int) {
-        print(index)
+    func koloda(_ koloda: KolodaView, didSwipeCardAt index: Int, in direction: SwipeResultDirection) {
+        getJokes()
     }
     
 }
@@ -91,7 +104,9 @@ extension MainViewController: KolodaViewDataSource {
     }
     
     func koloda(_ koloda: KolodaView, viewForCardAt index: Int) -> UIView {
-        return jokes[index].toCardImage(frame: view.frame)
+        let inset = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
+        let frame = view.frame.inset(by: inset)
+        return jokes[index].toCardImage(frame: frame)
     }
     
     func koloda(_ koloda: KolodaView, viewForCardOverlayAt index: Int) -> OverlayView? {

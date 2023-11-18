@@ -20,7 +20,7 @@ final class MainScreenAssembly: ScreenAssembly {
         )
         
         viewController.tabBarItem.image = UIImage(systemName: "figure.wave.circle.fill") 
-        viewController.title = "Jokes strean"
+        viewController.title = "Jokes stream"
         
         return viewController
     }
