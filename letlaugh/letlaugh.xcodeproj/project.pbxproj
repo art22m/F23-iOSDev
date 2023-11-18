@@ -17,6 +17,8 @@
 		B9B0D60B2B08DE2C003D44BF /* FavouriteScreenAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B0D60A2B08DE2C003D44BF /* FavouriteScreenAssembly.swift */; };
 		B9B0D60D2B08DEB0003D44BF /* RootCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B0D60C2B08DEB0003D44BF /* RootCoordinator.swift */; };
 		B9B0D60F2B08E088003D44BF /* ScreenAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B0D60E2B08E088003D44BF /* ScreenAssembly.swift */; };
+		B9B0D6112B08F798003D44BF /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B0D6102B08F798003D44BF /* UIView+Extensions.swift */; };
+		B9B0D6132B08FFEB003D44BF /* UITextView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B0D6122B08FFEB003D44BF /* UITextView+Extensions.swift */; };
 		B9F4EB3E2B07A4610072EF43 /* RequestSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F4EB3D2B07A4610072EF43 /* RequestSender.swift */; };
 		B9F4EB442B07B05D0072EF43 /* JokesNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F4EB432B07B05D0072EF43 /* JokesNetworkService.swift */; };
 		B9F4EB462B07B2490072EF43 /* Joke.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F4EB452B07B2490072EF43 /* Joke.swift */; };
@@ -39,6 +41,8 @@
 		B9B0D60A2B08DE2C003D44BF /* FavouriteScreenAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteScreenAssembly.swift; sourceTree = "<group>"; };
 		B9B0D60C2B08DEB0003D44BF /* RootCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootCoordinator.swift; sourceTree = "<group>"; };
 		B9B0D60E2B08E088003D44BF /* ScreenAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenAssembly.swift; sourceTree = "<group>"; };
+		B9B0D6102B08F798003D44BF /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		B9B0D6122B08FFEB003D44BF /* UITextView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView+Extensions.swift"; sourceTree = "<group>"; };
 		B9F4EB3D2B07A4610072EF43 /* RequestSender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestSender.swift; sourceTree = "<group>"; };
 		B9F4EB432B07B05D0072EF43 /* JokesNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokesNetworkService.swift; sourceTree = "<group>"; };
 		B9F4EB452B07B2490072EF43 /* Joke.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Joke.swift; sourceTree = "<group>"; };
@@ -234,6 +238,8 @@
 		B9F4EB532B0801C80072EF43 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				B9B0D6102B08F798003D44BF /* UIView+Extensions.swift */,
+				B9B0D6122B08FFEB003D44BF /* UITextView+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -411,8 +417,10 @@
 				B9F4EB3E2B07A4610072EF43 /* RequestSender.swift in Sources */,
 				B9F4EB462B07B2490072EF43 /* Joke.swift in Sources */,
 				B9B0D60F2B08E088003D44BF /* ScreenAssembly.swift in Sources */,
+				B9B0D6112B08F798003D44BF /* UIView+Extensions.swift in Sources */,
 				B9B0D6002B08D6A6003D44BF /* JokeOverlayView.swift in Sources */,
 				B9F4EB592B0802F20072EF43 /* AppData.swift in Sources */,
+				B9B0D6132B08FFEB003D44BF /* UITextView+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
