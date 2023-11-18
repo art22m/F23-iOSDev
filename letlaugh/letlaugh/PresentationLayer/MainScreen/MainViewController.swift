@@ -9,15 +9,30 @@ class MainViewController: UIViewController {
         
         static var backgroundColor: UIColor = .systemGray3
         
+        static var screenName = "Jokes stream"
+        static var screenNameSize = 30.0
+        
+        static var verticalIndent = 50.0
+        static var horizontalIndent = 30.0
     }
     
     // MARK: - Private Properties
     
     private var jokesNetworkService: JokesNetworkService
     
+    private lazy var titleLabel: UILabel = {
+        let label = UILabel()
+        label.text = Constants.screenName
+        label.numberOfLines = 1
+        label.font = UIFont.boldSystemFont(ofSize: Constants.screenNameSize)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
     private lazy var kolodaView: KolodaView = {
         let view = KolodaView()
         view.backgroundColor = Constants.backgroundColor
+        view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
     
@@ -45,11 +60,26 @@ class MainViewController: UIViewController {
     
     private func setUpViews() {
         view.backgroundColor = Constants.backgroundColor
-        view.addSubview(kolodaView)
-        view.embed(kolodaView, horizontalIndent: 30, verticalIndent: 60)
         
         kolodaView.dataSource = self
         kolodaView.delegate = self
+        
+        setUpLayout()
+    }
+    
+    private func setUpLayout() {
+        view.addSubviews(titleLabel, kolodaView)
+        
+        NSLayoutConstraint.activate([
+            titleLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            titleLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: Constants.horizontalIndent / 2),
+            titleLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            
+            kolodaView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: Constants.verticalIndent),
+            kolodaView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -Constants.verticalIndent),
+            kolodaView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: Constants.horizontalIndent),
+            kolodaView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -Constants.horizontalIndent)
+        ])
     }
     
     private func getJokes(number: Int = 1) {
