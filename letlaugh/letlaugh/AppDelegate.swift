@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let serviceAssembly = ServiceAssemblyImpl()
         coordinator = RootCoordinator(
             mainScreenAssembly: MainScreenAssembly(serviceAssembly: serviceAssembly),
-            favouriteScreenAssembly: FavouriteScreenAssembly(serviceAssembly: serviceAssembly)
+            favouriteScreenAssembly: FavouriteJokesScreenAssembly(serviceAssembly: serviceAssembly)
         )
         coordinator?.start(in: window)
         

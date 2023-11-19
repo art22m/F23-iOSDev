@@ -7,7 +7,7 @@ class MainViewController: UIViewController {
     
     private enum Constants {
         
-        static var backgroundColor: UIColor = .systemGray3
+        static var backgroundColor: UIColor = .systemBackground
         
         static var screenName = "Jokes stream"
         static var screenNameSize = 30.0
@@ -76,7 +76,9 @@ class MainViewController: UIViewController {
             titleLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             
             kolodaView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: Constants.verticalIndent),
-            kolodaView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -Constants.verticalIndent),
+            kolodaView.bottomAnchor.constraint(
+                equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -Constants.verticalIndent
+            ),
             kolodaView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: Constants.horizontalIndent),
             kolodaView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -Constants.horizontalIndent)
         ])

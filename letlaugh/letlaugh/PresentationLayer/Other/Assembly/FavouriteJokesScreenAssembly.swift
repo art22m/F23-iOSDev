@@ -1,6 +1,6 @@
 import UIKit
 
-final class FavouriteScreenAssembly: ScreenAssembly {
+final class FavouriteJokesScreenAssembly: ScreenAssembly {
 
     // MARK: - Private Properties
     
@@ -15,9 +15,7 @@ final class FavouriteScreenAssembly: ScreenAssembly {
     // MARK: - Internal Methods
     
     func makeViewController() -> UIViewController {
-        let viewController = UIViewController()
-        viewController.view.backgroundColor = .systemBlue
-        
+        let viewController = FavouriteJokesViewController()
         viewController.tabBarItem.image = UIImage(systemName: "heart.circle")
         viewController.title = "I like this ones"
         

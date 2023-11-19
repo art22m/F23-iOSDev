@@ -78,3 +78,6 @@ private_over_fileprivate:
 
 vertical_whitespace:
   max_empty_lines: 1
+
+nesting:
+  type_level: 3

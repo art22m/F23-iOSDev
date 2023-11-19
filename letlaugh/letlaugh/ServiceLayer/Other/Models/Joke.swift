@@ -18,11 +18,15 @@ extension Joke {
         let textView = UITextView.staticView(fontSize: 22)
         textView.text = text
         textView.frame = frame
-        textView.textAlignment = .center
         
-        let imageWithText = UIImageView(image: textView.asImage())
-        imageWithText.backgroundColor = .white
+        let imageWithText = UIImageView()
+        imageWithText.backgroundColor = .secondarySystemBackground
         imageWithText.layer.cornerRadius = 20
+        imageWithText.layer.borderWidth = 2
+        imageWithText.layer.borderColor = UIColor.systemGray3.cgColor
+        imageWithText.frame = frame
+        imageWithText.embed(textView, horizontalIndent: 5, verticalIndent: 10)
+        
         return imageWithText
     }
     

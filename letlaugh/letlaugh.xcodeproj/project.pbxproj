@@ -14,11 +14,13 @@
 		B90851402B064ADA0085861B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B908513E2B064ADA0085861B /* LaunchScreen.storyboard */; };
 		B9B0D6002B08D6A6003D44BF /* JokeOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B0D5FE2B08D6A6003D44BF /* JokeOverlayView.swift */; };
 		B9B0D6072B08DBCE003D44BF /* MainScreenAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B0D6062B08DBCE003D44BF /* MainScreenAssembly.swift */; };
-		B9B0D60B2B08DE2C003D44BF /* FavouriteScreenAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B0D60A2B08DE2C003D44BF /* FavouriteScreenAssembly.swift */; };
+		B9B0D60B2B08DE2C003D44BF /* FavouriteJokesScreenAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B0D60A2B08DE2C003D44BF /* FavouriteJokesScreenAssembly.swift */; };
 		B9B0D60D2B08DEB0003D44BF /* RootCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B0D60C2B08DEB0003D44BF /* RootCoordinator.swift */; };
 		B9B0D60F2B08E088003D44BF /* ScreenAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B0D60E2B08E088003D44BF /* ScreenAssembly.swift */; };
 		B9B0D6112B08F798003D44BF /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B0D6102B08F798003D44BF /* UIView+Extensions.swift */; };
 		B9B0D6132B08FFEB003D44BF /* UITextView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B0D6122B08FFEB003D44BF /* UITextView+Extensions.swift */; };
+		B9B0D6152B096DFB003D44BF /* FavouriteJokeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B0D6142B096DFB003D44BF /* FavouriteJokeCell.swift */; };
+		B9B0D6172B096E04003D44BF /* FavouriteJokesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B0D6162B096E04003D44BF /* FavouriteJokesViewController.swift */; };
 		B9F4EB3E2B07A4610072EF43 /* RequestSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F4EB3D2B07A4610072EF43 /* RequestSender.swift */; };
 		B9F4EB442B07B05D0072EF43 /* JokesNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F4EB432B07B05D0072EF43 /* JokesNetworkService.swift */; };
 		B9F4EB462B07B2490072EF43 /* Joke.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F4EB452B07B2490072EF43 /* Joke.swift */; };
@@ -38,11 +40,13 @@
 		B9AEDD28846E86F5E5732388 /* Pods-letlaugh.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-letlaugh.release.xcconfig"; path = "Target Support Files/Pods-letlaugh/Pods-letlaugh.release.xcconfig"; sourceTree = "<group>"; };
 		B9B0D5FE2B08D6A6003D44BF /* JokeOverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JokeOverlayView.swift; sourceTree = "<group>"; };
 		B9B0D6062B08DBCE003D44BF /* MainScreenAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenAssembly.swift; sourceTree = "<group>"; };
-		B9B0D60A2B08DE2C003D44BF /* FavouriteScreenAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteScreenAssembly.swift; sourceTree = "<group>"; };
+		B9B0D60A2B08DE2C003D44BF /* FavouriteJokesScreenAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteJokesScreenAssembly.swift; sourceTree = "<group>"; };
 		B9B0D60C2B08DEB0003D44BF /* RootCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootCoordinator.swift; sourceTree = "<group>"; };
 		B9B0D60E2B08E088003D44BF /* ScreenAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenAssembly.swift; sourceTree = "<group>"; };
 		B9B0D6102B08F798003D44BF /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		B9B0D6122B08FFEB003D44BF /* UITextView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView+Extensions.swift"; sourceTree = "<group>"; };
+		B9B0D6142B096DFB003D44BF /* FavouriteJokeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteJokeCell.swift; sourceTree = "<group>"; };
+		B9B0D6162B096E04003D44BF /* FavouriteJokesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteJokesViewController.swift; sourceTree = "<group>"; };
 		B9F4EB3D2B07A4610072EF43 /* RequestSender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestSender.swift; sourceTree = "<group>"; };
 		B9F4EB432B07B05D0072EF43 /* JokesNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokesNetworkService.swift; sourceTree = "<group>"; };
 		B9F4EB452B07B2490072EF43 /* Joke.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Joke.swift; sourceTree = "<group>"; };
@@ -111,7 +115,7 @@
 			children = (
 				B9B0D60E2B08E088003D44BF /* ScreenAssembly.swift */,
 				B9B0D6062B08DBCE003D44BF /* MainScreenAssembly.swift */,
-				B9B0D60A2B08DE2C003D44BF /* FavouriteScreenAssembly.swift */,
+				B9B0D60A2B08DE2C003D44BF /* FavouriteJokesScreenAssembly.swift */,
 			);
 			path = Assembly;
 			sourceTree = "<group>";
@@ -146,7 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				B9F4EB3B2B079C9D0072EF43 /* MainScreen */,
-				B9F4EB3A2B079C800072EF43 /* FavouriteScreen */,
+				B9F4EB3A2B079C800072EF43 /* FavouriteJokesScreen */,
 				B9B0D6042B08DB78003D44BF /* Other */,
 			);
 			path = PresentationLayer;
@@ -186,11 +190,13 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
-		B9F4EB3A2B079C800072EF43 /* FavouriteScreen */ = {
+		B9F4EB3A2B079C800072EF43 /* FavouriteJokesScreen */ = {
 			isa = PBXGroup;
 			children = (
+				B9B0D6142B096DFB003D44BF /* FavouriteJokeCell.swift */,
+				B9B0D6162B096E04003D44BF /* FavouriteJokesViewController.swift */,
 			);
-			path = FavouriteScreen;
+			path = FavouriteJokesScreen;
 			sourceTree = "<group>";
 		};
 		B9F4EB3B2B079C9D0072EF43 /* MainScreen */ = {
@@ -407,9 +413,11 @@
 			files = (
 				B9F4EB552B0801F50072EF43 /* UserDefaults+Wrapper.swift in Sources */,
 				B9B0D6072B08DBCE003D44BF /* MainScreenAssembly.swift in Sources */,
+				B9B0D6152B096DFB003D44BF /* FavouriteJokeCell.swift in Sources */,
 				B90851382B064AD80085861B /* MainViewController.swift in Sources */,
+				B9B0D6172B096E04003D44BF /* FavouriteJokesViewController.swift in Sources */,
 				B9F4EB492B07BA860072EF43 /* ServiceAssebmly.swift in Sources */,
-				B9B0D60B2B08DE2C003D44BF /* FavouriteScreenAssembly.swift in Sources */,
+				B9B0D60B2B08DE2C003D44BF /* FavouriteJokesScreenAssembly.swift in Sources */,
 				B9F4EB442B07B05D0072EF43 /* JokesNetworkService.swift in Sources */,
 				B9B0D60D2B08DEB0003D44BF /* RootCoordinator.swift in Sources */,
 				B90851342B064AD80085861B /* AppDelegate.swift in Sources */,

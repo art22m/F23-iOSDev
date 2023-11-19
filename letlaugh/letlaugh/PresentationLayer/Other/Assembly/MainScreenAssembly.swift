@@ -18,8 +18,7 @@ final class MainScreenAssembly: ScreenAssembly {
         let viewController = MainViewController(
             jokesNetworkService: serviceAssembly.makeJokesNetworkService()
         )
-        
-        viewController.tabBarItem.image = UIImage(systemName: "figure.wave.circle.fill") 
+        viewController.tabBarItem.image = UIImage(systemName: "figure.wave.circle.fill")
         viewController.title = "Jokes stream"
         
         return viewController
