@@ -7,10 +7,22 @@ protocol ServiceAssembly { }
 // MARK: Implementation
 
 final class ServiceAssemblyImpl: ServiceAssembly {
-
+    
+    // MARK: - Private Properties
+    
     private lazy var requestSender: RequestSenderImpl = {
         RequestSenderImpl()
     }()
+    
+    private let storageManager: StorageManager
+    
+    // MARK: - Init
+    
+    init(storageManager: StorageManager) {
+        self.storageManager = storageManager
+    }
+    
+    // MARK: - Internal Methods
 
     func makeJokesNetworkService() -> JokesNetworkService {
         return JokesNetworkServiceImpl(
@@ -20,7 +32,7 @@ final class ServiceAssemblyImpl: ServiceAssembly {
         )
     }
     
-    func makeJokesStorageService(storageManager: StorageManager) -> JokesStorageService {
+    func makeJokesStorageService() -> JokesStorageService {
         return JokesStorageServiceImpl(
             storageManager: storageManager
         )

@@ -1,6 +1,8 @@
 import UIKit
 
-final class MainScreenAssembly: ScreenAssembly {
+// MARK: JokesStreamScreenAssembly
+
+final class JokesStreamScreenAssembly: ScreenAssembly {
 
     // MARK: - Private Properties
     
@@ -15,8 +17,9 @@ final class MainScreenAssembly: ScreenAssembly {
     // MARK: - Internal Methods
     
     func makeViewController() -> UIViewController {
-        let viewController = MainViewController(
-            jokesNetworkService: serviceAssembly.makeJokesNetworkService()
+        let viewController = JokesStreamViewController(
+            networkService: serviceAssembly.makeJokesNetworkService(),
+            storageService: serviceAssembly.makeJokesStorageService()
         )
         viewController.tabBarItem.image = UIImage(systemName: "figure.wave.circle.fill")
         viewController.title = "Jokes stream"

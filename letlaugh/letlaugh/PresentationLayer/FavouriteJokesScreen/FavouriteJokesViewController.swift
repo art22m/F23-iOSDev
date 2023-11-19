@@ -17,6 +17,8 @@ class FavouriteJokesViewController: UIViewController {
     
     // MARK: - Private Properties
     
+    private var storageService: JokesStorageService
+    
     private lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         
@@ -26,13 +28,28 @@ class FavouriteJokesViewController: UIViewController {
         return view
     }()
     
-    private lazy var jokes: [Joke] = [Joke(name: "Joke #1", text: "DEBUG: makeReqeust data: 32576 bytes")]
+    private lazy var jokes: [Joke] = []
     
     // MARK: - Lifecycle
     
+    init(storageService: JokesStorageService) {
+        self.storageService = storageService
+        
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        updateJokes()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        updateJokes()
         setUpViews()
     }
     
@@ -51,6 +68,13 @@ class FavouriteJokesViewController: UIViewController {
     
     private func setUpLayout() {
         view.embed(collectionView)
+    }
+    
+    private func updateJokes() {
+        jokes = storageService.fetchJokes()
+        DispatchQueue.main.async { [weak self] in
+            self?.collectionView.reloadData()
+        }
     }
     
 }

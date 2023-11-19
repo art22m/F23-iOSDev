@@ -1,9 +1,9 @@
 import UIKit
 import Koloda
 
-// MARK: MainViewController
+// MARK: JokesStreamViewController
 
-class MainViewController: UIViewController {
+class JokesStreamViewController: UIViewController {
     
     // MARK: - Private Types
     
@@ -21,6 +21,7 @@ class MainViewController: UIViewController {
     // MARK: - Private Properties
     
     private var networkService: JokesNetworkService
+    private var storageService: JokesStorageService
     
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
@@ -42,8 +43,10 @@ class MainViewController: UIViewController {
     
     // MARK: - Lifecycle
     
-    init(jokesNetworkService: JokesNetworkService) {
-        self.networkService = jokesNetworkService
+    init(networkService: JokesNetworkService, storageService: JokesStorageService) {
+        self.networkService = networkService
+        self.storageService = storageService
+        
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -113,21 +116,22 @@ class MainViewController: UIViewController {
 
 // MARK: KolodaViewDelegate
 
-extension MainViewController: KolodaViewDelegate {
-    
-    func kolodaDidRunOutOfCards(_ koloda: KolodaView) {
-        print("DEBUG: run out of cards")
-    }
+extension JokesStreamViewController: KolodaViewDelegate {
     
     func koloda(_ koloda: KolodaView, didSwipeCardAt index: Int, in direction: SwipeResultDirection) {
         getJokes()
+
+        if direction == .right {
+            let joke = jokes[index]
+            storageService.saveJoke(joke: joke)
+        }
     }
     
 }
 
 // MARK: KolodaViewDataSource
 
-extension MainViewController: KolodaViewDataSource {
+extension JokesStreamViewController: KolodaViewDataSource {
     
     func kolodaNumberOfCards(_ koloda: KolodaView) -> Int {
         return jokes.count

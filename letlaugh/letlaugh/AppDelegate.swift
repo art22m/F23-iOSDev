@@ -19,10 +19,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let window = UIWindow(frame: UIScreen.main.bounds)
         self.window = window
         
-        let serviceAssembly = ServiceAssemblyImpl()
+        let coreDataManager = CoreDataManager(
+            context: persistentContainer.viewContext,
+            saveContext: saveContext
+        )
+        
+        let serviceAssembly = ServiceAssemblyImpl(
+            storageManager: coreDataManager
+        )
+        
         coordinator = RootCoordinator(
-            mainScreenAssembly: MainScreenAssembly(serviceAssembly: serviceAssembly),
-            favouriteScreenAssembly: FavouriteJokesScreenAssembly(serviceAssembly: serviceAssembly)
+            mainScreenAssembly: JokesStreamScreenAssembly(
+                serviceAssembly: serviceAssembly
+            ),
+            favouriteScreenAssembly: FavouriteJokesScreenAssembly(
+                serviceAssembly: serviceAssembly
+            )
         )
         coordinator?.start(in: window)
         
