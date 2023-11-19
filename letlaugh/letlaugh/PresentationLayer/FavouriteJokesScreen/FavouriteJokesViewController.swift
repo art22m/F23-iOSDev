@@ -1,4 +1,5 @@
 import UIKit
+import SwipeCellKit
 
 // MARK: FavouriteJokesViewController
 
@@ -77,6 +78,15 @@ class FavouriteJokesViewController: UIViewController {
         }
     }
     
+    private func deleteJoke(at id: Int) {
+        let joke = jokes.remove(at: id)
+        storageService.deleteJoke(joke: joke)
+        
+        DispatchQueue.main.async { [weak self] in
+            self?.collectionView.reloadData()
+        }
+    }
+    
 }
 
 // MARK: UICollectionViewDelegate
@@ -110,6 +120,7 @@ extension FavouriteJokesViewController: UICollectionViewDataSource {
         }
         
         cell.configure(with: jokes[indexPath.row])
+        cell.delegate = self
         return cell
     }
     
@@ -127,4 +138,28 @@ extension FavouriteJokesViewController: UICollectionViewDelegateFlowLayout {
         return CGSize(width: view.frame.width - Constants.cellVerticalIndent * 2, height: Constants.cellHeight)
     }
     
+}
+
+// MARK: SwipeCollectionViewCellDelegate
+
+extension FavouriteJokesViewController: SwipeCollectionViewCellDelegate {
+    
+    func collectionView(
+        _ collectionView: UICollectionView,
+        editActionsForItemAt indexPath: IndexPath,
+        for orientation: SwipeActionsOrientation
+    ) -> [SwipeAction]? {
+        guard orientation == .right else {
+            return nil
+        }
+
+        let deleteAction = SwipeAction(style: .destructive, title: "delete") { [weak self] _, indexPath in
+            self?.deleteJoke(at: indexPath.row)
+        }
+        
+        deleteAction.image = UIImage(systemName: "trash.circle.fill")
+        deleteAction.transitionDelegate = ScaleTransition.default
+        return [deleteAction]
+    }
+
 }

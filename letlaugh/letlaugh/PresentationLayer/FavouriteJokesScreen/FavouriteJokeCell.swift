@@ -1,8 +1,9 @@
 import UIKit
+import SwipeCellKit
 
 // MARK: FavouriteJokeCell
 
-class FavouriteJokeCell: UICollectionViewCell {
+class FavouriteJokeCell: SwipeCollectionViewCell {
     
     static let identifier = "FavoriteJokeCell"
     
@@ -69,12 +70,12 @@ class FavouriteJokeCell: UICollectionViewCell {
     }
     
     private func setUpViews() {
-        backgroundColor = .secondarySystemBackground
-        layer.cornerRadius = 12
-        layer.borderWidth = 2
-        layer.borderColor = UIColor.systemGray3.cgColor
+        contentView.backgroundColor = .secondarySystemBackground
+        contentView.layer.cornerRadius = 12
+        contentView.layer.borderWidth = 2
+        contentView.layer.borderColor = UIColor.systemGray3.cgColor
         
-        addSubviews(titleLabel, descriptionLabel)
+        contentView.addSubviews(titleLabel, descriptionLabel)
         
         setUpLayout()
     }
@@ -82,13 +83,13 @@ class FavouriteJokeCell: UICollectionViewCell {
     private func setUpLayout() {
         NSLayoutConstraint.activate([
             titleLabel.leadingAnchor.constraint(
-                equalTo: leadingAnchor, constant: Constants.Indents.horizontal
+                equalTo: contentView.leadingAnchor, constant: Constants.Indents.horizontal
             ),
             titleLabel.topAnchor.constraint(
-                equalTo: topAnchor, constant: Constants.Indents.vertical
+                equalTo: contentView.topAnchor, constant: Constants.Indents.vertical
             ),
             titleLabel.trailingAnchor.constraint(
-                equalTo: trailingAnchor, constant: Constants.Indents.horizontal
+                equalTo: contentView.trailingAnchor, constant: Constants.Indents.horizontal
             ),
             titleLabel.heightAnchor.constraint(equalToConstant: Constants.titleHeight),
             
@@ -96,13 +97,13 @@ class FavouriteJokeCell: UICollectionViewCell {
                 equalTo: titleLabel.bottomAnchor, constant: Constants.Indents.labelsIndent
             ),
             descriptionLabel.trailingAnchor.constraint(
-                equalTo: trailingAnchor, constant: -Constants.Indents.horizontal
+                equalTo: contentView.trailingAnchor, constant: -Constants.Indents.horizontal
             ),
             descriptionLabel.bottomAnchor.constraint(
-                equalTo: bottomAnchor, constant: -Constants.Indents.vertical
+                equalTo: contentView.bottomAnchor, constant: -Constants.Indents.vertical
             ),
             descriptionLabel.leadingAnchor.constraint(
-                equalTo: leadingAnchor, constant: Constants.Indents.horizontal
+                equalTo: contentView.leadingAnchor, constant: Constants.Indents.horizontal
             )
         ])
     }
