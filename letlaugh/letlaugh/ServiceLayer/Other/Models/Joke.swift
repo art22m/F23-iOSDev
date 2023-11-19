@@ -3,7 +3,7 @@ import UIKit
 
 // MARK: Model
 
-struct Joke: Codable {
+struct Joke: Codable, Equatable {
     
     let name: String
     let text: String

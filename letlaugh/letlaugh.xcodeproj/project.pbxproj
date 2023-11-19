@@ -17,6 +17,8 @@
 		B90851382B064AD80085861B /* JokesStreamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90851372B064AD80085861B /* JokesStreamViewController.swift */; };
 		B908513D2B064ADA0085861B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B908513C2B064ADA0085861B /* Assets.xcassets */; };
 		B90851402B064ADA0085861B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B908513E2B064ADA0085861B /* LaunchScreen.storyboard */; };
+		B95F1B882B0A748F0017FD47 /* JokeNetworkServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95F1B872B0A748F0017FD47 /* JokeNetworkServiceTests.swift */; };
+		B95F1B912B0A75770017FD47 /* NetworkServiceMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95F1B902B0A75770017FD47 /* NetworkServiceMocks.swift */; };
 		B9B0D6002B08D6A6003D44BF /* JokeOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B0D5FE2B08D6A6003D44BF /* JokeOverlayView.swift */; };
 		B9B0D6072B08DBCE003D44BF /* JokesStreamScreenAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B0D6062B08DBCE003D44BF /* JokesStreamScreenAssembly.swift */; };
 		B9B0D60B2B08DE2C003D44BF /* FavouriteJokesScreenAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B0D60A2B08DE2C003D44BF /* FavouriteJokesScreenAssembly.swift */; };
@@ -36,6 +38,16 @@
 		B9F4EB592B0802F20072EF43 /* AppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F4EB582B0802F20072EF43 /* AppData.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		B95F1B892B0A748F0017FD47 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B90851282B064AD70085861B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B908512F2B064AD70085861B;
+			remoteInfo = letlaugh;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		B90593D32B0A364F00ACA9CC /* JokeEntity+CoreData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "JokeEntity+CoreData.swift"; sourceTree = "<group>"; };
 		B90593D62B0A389700ACA9CC /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
@@ -48,6 +60,9 @@
 		B908513C2B064ADA0085861B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B908513F2B064ADA0085861B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B90851412B064ADA0085861B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B95F1B852B0A748F0017FD47 /* letlaughTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = letlaughTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B95F1B872B0A748F0017FD47 /* JokeNetworkServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeNetworkServiceTests.swift; sourceTree = "<group>"; };
+		B95F1B902B0A75770017FD47 /* NetworkServiceMocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceMocks.swift; sourceTree = "<group>"; };
 		B9AEDD28846E86F5E5732388 /* Pods-letlaugh.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-letlaugh.release.xcconfig"; path = "Target Support Files/Pods-letlaugh/Pods-letlaugh.release.xcconfig"; sourceTree = "<group>"; };
 		B9B0D5FE2B08D6A6003D44BF /* JokeOverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JokeOverlayView.swift; sourceTree = "<group>"; };
 		B9B0D6062B08DBCE003D44BF /* JokesStreamScreenAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokesStreamScreenAssembly.swift; sourceTree = "<group>"; };
@@ -76,6 +91,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				7857380EA23B958CAAF4D720 /* Pods_letlaugh.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B95F1B822B0A748F0017FD47 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				B90851322B064AD80085861B /* letlaugh */,
+				B95F1B862B0A748F0017FD47 /* letlaughTests */,
 				B90851312B064AD80085861B /* Products */,
 				6AD4C416E2EE01240874AEE3 /* Pods */,
 				BD234011A649A3581ECEAA98 /* Frameworks */,
@@ -131,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				B90851302B064AD80085861B /* letlaugh.app */,
+				B95F1B852B0A748F0017FD47 /* letlaughTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -147,6 +171,23 @@
 				B9B0D63B2B0A20CF003D44BF /* letlaugh.xcdatamodeld */,
 			);
 			path = letlaugh;
+			sourceTree = "<group>";
+		};
+		B95F1B862B0A748F0017FD47 /* letlaughTests */ = {
+			isa = PBXGroup;
+			children = (
+				B95F1B8E2B0A75320017FD47 /* Mocks */,
+				B95F1B872B0A748F0017FD47 /* JokeNetworkServiceTests.swift */,
+			);
+			path = letlaughTests;
+			sourceTree = "<group>";
+		};
+		B95F1B8E2B0A75320017FD47 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				B95F1B902B0A75770017FD47 /* NetworkServiceMocks.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 		B9B0D6012B08DB3A003D44BF /* Assembly */ = {
@@ -342,6 +383,24 @@
 			productReference = B90851302B064AD80085861B /* letlaugh.app */;
 			productType = "com.apple.product-type.application";
 		};
+		B95F1B842B0A748F0017FD47 /* letlaughTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B95F1B8D2B0A748F0017FD47 /* Build configuration list for PBXNativeTarget "letlaughTests" */;
+			buildPhases = (
+				B95F1B812B0A748F0017FD47 /* Sources */,
+				B95F1B822B0A748F0017FD47 /* Frameworks */,
+				B95F1B832B0A748F0017FD47 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B95F1B8A2B0A748F0017FD47 /* PBXTargetDependency */,
+			);
+			name = letlaughTests;
+			productName = letlaughTests;
+			productReference = B95F1B852B0A748F0017FD47 /* letlaughTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -354,6 +413,10 @@
 				TargetAttributes = {
 					B908512F2B064AD70085861B = {
 						CreatedOnToolsVersion = 14.3.1;
+					};
+					B95F1B842B0A748F0017FD47 = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = B908512F2B064AD70085861B;
 					};
 				};
 			};
@@ -371,6 +434,7 @@
 			projectRoot = "";
 			targets = (
 				B908512F2B064AD70085861B /* letlaugh */,
+				B95F1B842B0A748F0017FD47 /* letlaughTests */,
 			);
 		};
 /* End PBXProject section */
@@ -382,6 +446,13 @@
 			files = (
 				B90851402B064ADA0085861B /* LaunchScreen.storyboard in Resources */,
 				B908513D2B064ADA0085861B /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B95F1B832B0A748F0017FD47 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -480,7 +551,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B95F1B812B0A748F0017FD47 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B95F1B912B0A75770017FD47 /* NetworkServiceMocks.swift in Sources */,
+				B95F1B882B0A748F0017FD47 /* JokeNetworkServiceTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B95F1B8A2B0A748F0017FD47 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B908512F2B064AD70085861B /* letlaugh */;
+			targetProxy = B95F1B892B0A748F0017FD47 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		B908513E2B064ADA0085861B /* LaunchScreen.storyboard */ = {
@@ -668,6 +756,42 @@
 			};
 			name = Release;
 		};
+		B95F1B8B2B0A748F0017FD47 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RTG39GK7BU;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = tech.art22m.letlaughTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/letlaugh.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/letlaugh";
+			};
+			name = Debug;
+		};
+		B95F1B8C2B0A748F0017FD47 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RTG39GK7BU;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = tech.art22m.letlaughTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/letlaugh.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/letlaugh";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -685,6 +809,15 @@
 			buildConfigurations = (
 				B90851452B064ADA0085861B /* Debug */,
 				B90851462B064ADA0085861B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B95F1B8D2B0A748F0017FD47 /* Build configuration list for PBXNativeTarget "letlaughTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B95F1B8B2B0A748F0017FD47 /* Debug */,
+				B95F1B8C2B0A748F0017FD47 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
