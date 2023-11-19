@@ -1,5 +1,7 @@
 import Foundation
 
+// MARK: - Errors
+
 enum RequestError: Error {
     
     case requestError(String)
@@ -8,17 +10,27 @@ enum RequestError: Error {
     
 }
 
+// MARK: - Protocol
+
 protocol RequestSender {
     func makeRequest(request: URLRequest, completion: @escaping (Result<Data, RequestError>) -> Void)
 }
 
+// MARK: - Implementation
+
 final class RequestSenderImpl: RequestSender {
     
+    // MARK: - Private Properties
+    
     private let session: URLSession
+    
+    // MARK: - Init
     
     init(session: URLSession = URLSession.shared) {
         self.session = session
     }
+    
+    // MARK: - Internal Methods
     
     func makeRequest(request: URLRequest, completion: @escaping (Result<Data, RequestError>) -> Void) {
         let task = session.dataTask(with: request) { data, response, error in

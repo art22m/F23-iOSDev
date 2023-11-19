@@ -54,6 +54,13 @@ class FavouriteJokeCell: UICollectionViewCell {
         commonInit()
     }
     
+    // MARK: - Internal Methods
+    
+    func configure(with joke: Joke) {
+        titleLabel.text = joke.name
+        descriptionLabel.text = joke.text
+    }
+    
     // MARK: - Private Methods
     
     private func commonInit() {
@@ -96,13 +103,6 @@ class FavouriteJokeCell: UICollectionViewCell {
                 equalTo: leadingAnchor, constant: Constants.Indents.horizontal
             )
         ])
-    }
-    
-    // MARK: - Internal Methods
-    
-    func configure(with joke: Joke) {
-        titleLabel.text = joke.name
-        descriptionLabel.text = joke.text
     }
     
 }

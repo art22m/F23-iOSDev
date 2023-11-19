@@ -1,10 +1,10 @@
 import Foundation
 
-// MARK: - Protocol
+// MARK: Protocol
 
 protocol ServiceAssembly { }
 
-// MARK: - Implementation
+// MARK: Implementation
 
 final class ServiceAssemblyImpl: ServiceAssembly {
 
@@ -12,11 +12,17 @@ final class ServiceAssemblyImpl: ServiceAssembly {
         RequestSenderImpl()
     }()
 
-    func makeJokesNetworkService() -> JokesNetworkServiceImpl {
+    func makeJokesNetworkService() -> JokesNetworkService {
         return JokesNetworkServiceImpl(
             baseUrl: "https://baneks.ru",
             parser: BaneksParser(),
             requestSender: requestSender
+        )
+    }
+    
+    func makeJokesStorageService(storageManager: StorageManager) -> JokesStorageService {
+        return JokesStorageServiceImpl(
+            storageManager: storageManager
         )
     }
     

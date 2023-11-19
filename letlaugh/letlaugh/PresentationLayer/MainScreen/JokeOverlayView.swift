@@ -1,6 +1,8 @@
 import UIKit
 import Koloda
 
+// MARK: JokeOverlayView
+
 class JokeOverlayView: OverlayView {
     
     // MARK: - OverlayView

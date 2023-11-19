@@ -1,6 +1,8 @@
 import UIKit
 import Koloda
 
+// MARK: MainViewController
+
 class MainViewController: UIViewController {
     
     // MARK: - Private Types
@@ -18,7 +20,7 @@ class MainViewController: UIViewController {
     
     // MARK: - Private Properties
     
-    private var jokesNetworkService: JokesNetworkService
+    private var networkService: JokesNetworkService
     
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
@@ -41,7 +43,7 @@ class MainViewController: UIViewController {
     // MARK: - Lifecycle
     
     init(jokesNetworkService: JokesNetworkService) {
-        self.jokesNetworkService = jokesNetworkService
+        self.networkService = jokesNetworkService
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -89,7 +91,7 @@ class MainViewController: UIViewController {
         
         for _ in 0 ..< number {
             group.enter()
-            jokesNetworkService.getNextJoke { [weak self] result in
+            networkService.getNextJoke { [weak self] result in
                 defer { group.leave() }
                 
                 switch result {

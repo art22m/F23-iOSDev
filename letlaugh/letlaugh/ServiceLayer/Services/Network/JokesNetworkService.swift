@@ -1,6 +1,6 @@
 import Foundation
 
-// MARK: - Protocol
+// MARK: Protocol
 
 protocol JokesNetworkService: AnyObject {
     
@@ -9,7 +9,7 @@ protocol JokesNetworkService: AnyObject {
     
 }
 
-// MARK: - Implementation
+// MARK: Implementation
 
 final class JokesNetworkServiceImpl: JokesNetworkService {
     
@@ -53,10 +53,10 @@ final class JokesNetworkServiceImpl: JokesNetworkService {
         print("DEBUG Request to \(url.absoluteString)")
         
         let request = URLRequest(url: url)
-        requestSender.makeRequest(request: request) { result in // TODO: Make weak
+        requestSender.makeRequest(request: request) { [weak self] result in
             switch result {
             case .success(let data):
-                guard let joke = self.parser.parse(data: data) else {
+                guard let joke = self?.parser.parse(data: data) else {
                     completion(.failure(Errors.parseError))
                     return
                 }

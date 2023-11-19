@@ -1,7 +1,7 @@
 import Foundation
 import SwiftSoup
 
-// MARK: - Protocol
+// MARK: Protocol
 
 protocol JokesParser {
     
@@ -9,7 +9,7 @@ protocol JokesParser {
     
 }
 
-// MARK: - Implementation
+// MARK: Implementation
 
 final class BaneksParser: JokesParser {
     

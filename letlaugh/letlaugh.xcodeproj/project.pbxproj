@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		7857380EA23B958CAAF4D720 /* Pods_letlaugh.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BF90B57558FFE80EA8C596 /* Pods_letlaugh.framework */; };
+		B90593D52B0A364F00ACA9CC /* JokeEntity+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90593D32B0A364F00ACA9CC /* JokeEntity+CoreData.swift */; };
+		B90593D72B0A389700ACA9CC /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90593D62B0A389700ACA9CC /* CoreDataManager.swift */; };
+		B90593D92B0A390400ACA9CC /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90593D82B0A390400ACA9CC /* StorageManager.swift */; };
+		B90593DC2B0A3D8300ACA9CC /* JokesStorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90593DB2B0A3D8300ACA9CC /* JokesStorageService.swift */; };
 		B90851342B064AD80085861B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90851332B064AD80085861B /* AppDelegate.swift */; };
 		B90851382B064AD80085861B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90851372B064AD80085861B /* MainViewController.swift */; };
 		B908513D2B064ADA0085861B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B908513C2B064ADA0085861B /* Assets.xcassets */; };
@@ -21,16 +25,21 @@
 		B9B0D6132B08FFEB003D44BF /* UITextView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B0D6122B08FFEB003D44BF /* UITextView+Extensions.swift */; };
 		B9B0D6152B096DFB003D44BF /* FavouriteJokeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B0D6142B096DFB003D44BF /* FavouriteJokeCell.swift */; };
 		B9B0D6172B096E04003D44BF /* FavouriteJokesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B0D6162B096E04003D44BF /* FavouriteJokesViewController.swift */; };
+		B9B0D63D2B0A20CF003D44BF /* letlaugh.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B9B0D63B2B0A20CF003D44BF /* letlaugh.xcdatamodeld */; };
 		B9F4EB3E2B07A4610072EF43 /* RequestSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F4EB3D2B07A4610072EF43 /* RequestSender.swift */; };
 		B9F4EB442B07B05D0072EF43 /* JokesNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F4EB432B07B05D0072EF43 /* JokesNetworkService.swift */; };
 		B9F4EB462B07B2490072EF43 /* Joke.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F4EB452B07B2490072EF43 /* Joke.swift */; };
 		B9F4EB492B07BA860072EF43 /* ServiceAssebmly.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F4EB482B07BA860072EF43 /* ServiceAssebmly.swift */; };
 		B9F4EB512B07BE770072EF43 /* JokesParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F4EB502B07BE770072EF43 /* JokesParser.swift */; };
-		B9F4EB552B0801F50072EF43 /* UserDefaults+Wrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F4EB542B0801F50072EF43 /* UserDefaults+Wrapper.swift */; };
+		B9F4EB552B0801F50072EF43 /* UserDefaults+Wrappers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F4EB542B0801F50072EF43 /* UserDefaults+Wrappers.swift */; };
 		B9F4EB592B0802F20072EF43 /* AppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F4EB582B0802F20072EF43 /* AppData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B90593D32B0A364F00ACA9CC /* JokeEntity+CoreData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "JokeEntity+CoreData.swift"; sourceTree = "<group>"; };
+		B90593D62B0A389700ACA9CC /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		B90593D82B0A390400ACA9CC /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		B90593DB2B0A3D8300ACA9CC /* JokesStorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokesStorageService.swift; sourceTree = "<group>"; };
 		B90851302B064AD80085861B /* letlaugh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = letlaugh.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B90851332B064AD80085861B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B90851372B064AD80085861B /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -47,12 +56,13 @@
 		B9B0D6122B08FFEB003D44BF /* UITextView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView+Extensions.swift"; sourceTree = "<group>"; };
 		B9B0D6142B096DFB003D44BF /* FavouriteJokeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteJokeCell.swift; sourceTree = "<group>"; };
 		B9B0D6162B096E04003D44BF /* FavouriteJokesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteJokesViewController.swift; sourceTree = "<group>"; };
+		B9B0D63C2B0A20CF003D44BF /* letlaugh.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = letlaugh.xcdatamodel; sourceTree = "<group>"; };
 		B9F4EB3D2B07A4610072EF43 /* RequestSender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestSender.swift; sourceTree = "<group>"; };
 		B9F4EB432B07B05D0072EF43 /* JokesNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokesNetworkService.swift; sourceTree = "<group>"; };
 		B9F4EB452B07B2490072EF43 /* Joke.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Joke.swift; sourceTree = "<group>"; };
 		B9F4EB482B07BA860072EF43 /* ServiceAssebmly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceAssebmly.swift; sourceTree = "<group>"; };
 		B9F4EB502B07BE770072EF43 /* JokesParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokesParser.swift; sourceTree = "<group>"; };
-		B9F4EB542B0801F50072EF43 /* UserDefaults+Wrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Wrapper.swift"; sourceTree = "<group>"; };
+		B9F4EB542B0801F50072EF43 /* UserDefaults+Wrappers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Wrappers.swift"; sourceTree = "<group>"; };
 		B9F4EB582B0802F20072EF43 /* AppData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppData.swift; sourceTree = "<group>"; };
 		F17FC34682C61059F0D79D7B /* Pods-letlaugh.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-letlaugh.debug.xcconfig"; path = "Target Support Files/Pods-letlaugh/Pods-letlaugh.debug.xcconfig"; sourceTree = "<group>"; };
 		F9BF90B57558FFE80EA8C596 /* Pods_letlaugh.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_letlaugh.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -77,6 +87,24 @@
 				B9AEDD28846E86F5E5732388 /* Pods-letlaugh.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		B90593D12B0A364000ACA9CC /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				B90593DA2B0A399000ACA9CC /* Models */,
+				B90593D82B0A390400ACA9CC /* StorageManager.swift */,
+				B90593D62B0A389700ACA9CC /* CoreDataManager.swift */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		B90593DA2B0A399000ACA9CC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B90593D32B0A364F00ACA9CC /* JokeEntity+CoreData.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		B90851272B064AD70085861B = {
@@ -106,6 +134,7 @@
 				B9F4EB572B0802B70072EF43 /* Other */,
 				B90851332B064AD80085861B /* AppDelegate.swift */,
 				B90851412B064ADA0085861B /* Info.plist */,
+				B9B0D63B2B0A20CF003D44BF /* letlaugh.xcdatamodeld */,
 			);
 			path = letlaugh;
 			sourceTree = "<group>";
@@ -159,6 +188,7 @@
 		B9F4EB362B079BD00072EF43 /* CoreLayer */ = {
 			isa = PBXGroup;
 			children = (
+				B90593D12B0A364000ACA9CC /* Storage */,
 				B9F4EB3C2B07A4310072EF43 /* Network */,
 			);
 			path = CoreLayer;
@@ -236,7 +266,7 @@
 		B9F4EB522B0801BF0072EF43 /* Wrappers */ = {
 			isa = PBXGroup;
 			children = (
-				B9F4EB542B0801F50072EF43 /* UserDefaults+Wrapper.swift */,
+				B9F4EB542B0801F50072EF43 /* UserDefaults+Wrappers.swift */,
 			);
 			path = Wrappers;
 			sourceTree = "<group>";
@@ -253,6 +283,7 @@
 		B9F4EB562B08022E0072EF43 /* Storage */ = {
 			isa = PBXGroup;
 			children = (
+				B90593DB2B0A3D8300ACA9CC /* JokesStorageService.swift */,
 			);
 			path = Storage;
 			sourceTree = "<group>";
@@ -411,17 +442,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B9F4EB552B0801F50072EF43 /* UserDefaults+Wrapper.swift in Sources */,
+				B9F4EB552B0801F50072EF43 /* UserDefaults+Wrappers.swift in Sources */,
 				B9B0D6072B08DBCE003D44BF /* MainScreenAssembly.swift in Sources */,
 				B9B0D6152B096DFB003D44BF /* FavouriteJokeCell.swift in Sources */,
 				B90851382B064AD80085861B /* MainViewController.swift in Sources */,
 				B9B0D6172B096E04003D44BF /* FavouriteJokesViewController.swift in Sources */,
+				B9B0D63D2B0A20CF003D44BF /* letlaugh.xcdatamodeld in Sources */,
+				B90593DC2B0A3D8300ACA9CC /* JokesStorageService.swift in Sources */,
 				B9F4EB492B07BA860072EF43 /* ServiceAssebmly.swift in Sources */,
 				B9B0D60B2B08DE2C003D44BF /* FavouriteJokesScreenAssembly.swift in Sources */,
 				B9F4EB442B07B05D0072EF43 /* JokesNetworkService.swift in Sources */,
 				B9B0D60D2B08DEB0003D44BF /* RootCoordinator.swift in Sources */,
 				B90851342B064AD80085861B /* AppDelegate.swift in Sources */,
 				B9F4EB512B07BE770072EF43 /* JokesParser.swift in Sources */,
+				B90593D72B0A389700ACA9CC /* CoreDataManager.swift in Sources */,
+				B90593D92B0A390400ACA9CC /* StorageManager.swift in Sources */,
+				B90593D52B0A364F00ACA9CC /* JokeEntity+CoreData.swift in Sources */,
 				B9F4EB3E2B07A4610072EF43 /* RequestSender.swift in Sources */,
 				B9F4EB462B07B2490072EF43 /* Joke.swift in Sources */,
 				B9B0D60F2B08E088003D44BF /* ScreenAssembly.swift in Sources */,
@@ -638,6 +674,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B9B0D63B2B0A20CF003D44BF /* letlaugh.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B9B0D63C2B0A20CF003D44BF /* letlaugh.xcdatamodel */,
+			);
+			currentVersion = B9B0D63C2B0A20CF003D44BF /* letlaugh.xcdatamodel */;
+			path = letlaugh.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = B90851282B064AD70085861B /* Project object */;
 }

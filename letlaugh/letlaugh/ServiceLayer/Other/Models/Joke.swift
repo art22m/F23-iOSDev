@@ -1,7 +1,7 @@
 import Foundation
 import UIKit
 
-// MARK: - Model
+// MARK: Model
 
 struct Joke: Codable {
     
@@ -10,7 +10,7 @@ struct Joke: Codable {
     
 }
 
-// MARK: - Extensions
+// MARK: Extensions
 
 extension Joke {
     
