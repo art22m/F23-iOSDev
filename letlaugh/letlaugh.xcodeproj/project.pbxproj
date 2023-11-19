@@ -619,6 +619,7 @@
 				DEVELOPMENT_TEAM = RTG39GK7BU;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = letlaugh/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = LetLaugh;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -647,6 +648,7 @@
 				DEVELOPMENT_TEAM = RTG39GK7BU;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = letlaugh/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = LetLaugh;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
