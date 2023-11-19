@@ -14,7 +14,7 @@ class JokesStreamViewController: UIViewController {
         static var screenName = "Jokes stream"
         static var screenNameSize = 30.0
         
-        static var verticalIndent = 50.0
+        static var verticalIndent = 80.0
         static var horizontalIndent = 30.0
     }
     
@@ -117,6 +117,12 @@ class JokesStreamViewController: UIViewController {
 // MARK: KolodaViewDelegate
 
 extension JokesStreamViewController: KolodaViewDelegate {
+    
+    func koloda(_ koloda: KolodaView, didSelectCardAt index: Int) {
+        let viewController = JokePageViewController()
+        viewController.configure(with: jokes[index])
+        present(viewController, animated: true)
+    }
     
     func koloda(_ koloda: KolodaView, didSwipeCardAt index: Int, in direction: SwipeResultDirection) {
         getJokes()

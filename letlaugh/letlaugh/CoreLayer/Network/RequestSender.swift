@@ -1,6 +1,6 @@
 import Foundation
 
-// MARK: - Errors
+// MARK: Errors
 
 enum RequestError: Error {
     
@@ -10,13 +10,13 @@ enum RequestError: Error {
     
 }
 
-// MARK: - Protocol
+// MARK: Protocol
 
 protocol RequestSender {
     func makeRequest(request: URLRequest, completion: @escaping (Result<Data, RequestError>) -> Void)
 }
 
-// MARK: - Implementation
+// MARK: Implementation
 
 final class RequestSenderImpl: RequestSender {
     
@@ -48,8 +48,6 @@ final class RequestSenderImpl: RequestSender {
                 completion(.failure(.invalidResponse()))
                 return
             }
-            
-            print("DEBUG: makeReqeust data:", data)
             
             completion(.success(data))
         }

@@ -84,10 +84,9 @@ class FavouriteJokesViewController: UIViewController {
 extension FavouriteJokesViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        //        let vc = ContactDetailsViewController()
-        //        vc.configure(with: contactModels.contacts[indexPath.row])
-        //        present(vc, animated: true)
-        print("tapped at #1")
+        let viewController = JokePageViewController()
+        viewController.configure(with: jokes[indexPath.row])
+        present(viewController, animated: true)
     }
     
 }

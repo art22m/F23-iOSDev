@@ -50,8 +50,6 @@ final class JokesNetworkServiceImpl: JokesNetworkService {
             return
         }
         
-        print("DEBUG Request to \(url.absoluteString)")
-        
         let request = URLRequest(url: url)
         requestSender.makeRequest(request: request) { [weak self] result in
             switch result {

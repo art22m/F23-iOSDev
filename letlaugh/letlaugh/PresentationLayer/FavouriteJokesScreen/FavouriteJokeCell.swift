@@ -11,6 +11,7 @@ class FavouriteJokeCell: UICollectionViewCell {
     private enum Constants {
         
         static var titleFontSize = 30.0
+        static var titleHeight = 36.0
         static var descriptionFontSize = 20.0
         
         enum Indents {
@@ -87,8 +88,9 @@ class FavouriteJokeCell: UICollectionViewCell {
                 equalTo: topAnchor, constant: Constants.Indents.vertical
             ),
             titleLabel.trailingAnchor.constraint(
-                greaterThanOrEqualTo: trailingAnchor, constant: Constants.Indents.horizontal
+                equalTo: trailingAnchor, constant: Constants.Indents.horizontal
             ),
+            titleLabel.heightAnchor.constraint(equalToConstant: Constants.titleHeight),
             
             descriptionLabel.topAnchor.constraint(
                 equalTo: titleLabel.bottomAnchor, constant: Constants.Indents.labelsIndent

@@ -1,5 +1,7 @@
 import UIKit
 
+// MARK: RootCoordinator
+
 final class RootCoordinator {
     
     // MARK: - Private Properties
