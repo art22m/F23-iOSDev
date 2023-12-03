@@ -1,0 +1,32 @@
+PODS:
+  - Koloda (5.0.1):
+    - pop (~> 1.0)
+  - pop (1.0.12)
+  - SwiftLint (0.46.5)
+  - SwiftSoup (2.6.1)
+  - SwipeCellKit (2.7.1)
+
+DEPENDENCIES:
+  - Koloda
+  - SwiftLint (~> 0.46.2)
+  - SwiftSoup
+  - SwipeCellKit
+
+SPEC REPOS:
+  trunk:
+    - Koloda
+    - pop
+    - SwiftLint
+    - SwiftSoup
+    - SwipeCellKit
+
+SPEC CHECKSUMS:
+  Koloda: d07b9199a383abc5898b62aa945a599f5e7c0c4b
+  pop: d582054913807fd11fd50bfe6a539d91c7e1a55a
+  SwiftLint: 2c16e8fa99dac2e440dc0c70ea74d2532048f6cf
+  SwiftSoup: 5dd2c1b06afc964f30d99894af6ede22ede627aa
+  SwipeCellKit: 3972254a826da74609926daf59b08d6c72e619ea
+
+PODFILE CHECKSUM: 78e254af12ebf3f79a0ae6982aa0aa12806a7075
+
+COCOAPODS: 1.14.2
